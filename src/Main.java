@@ -5,22 +5,22 @@ public class Main {
         // параметров программы: начального счёта,
         // суммы пополнения и тп
         int startBalance = 100;    // Начальный счёт
-        int summaPop = 1100;    // Сумма пополнения
+        int amount_deposit = 1100;    // Сумма пополнения
         int bonusUp = 1000;   // Сумма от которой капает бонус
         int bonus = 0;              // Сумма бонуса
-        int itogBalance = 0;       // Итоговый баланс
+        int Result_balance = 0;       // Итоговый баланс
 
         // превысила ли
         // сумма пополнения порог
-        if (summaPop > bonusUp) {
-            bonus = summaPop / 100;
+        if (amount_deposit > bonusUp) {
+            bonus = amount_deposit / 100;
         }
 
         // Рассчитываем итоговый счёт
-        itogBalance = startBalance + summaPop + bonus;
+        Result_balance = startBalance + amount_deposit + bonus;
 
         //Вывод результата
         System.out.println("Бонус: " + bonus + " рублей");
-        System.out.println("Итоговый счёт: " + itogBalance + " рублей");
+        System.out.println("Итоговый счёт: " + Result_balance + " рублей");
     }
 }
